@@ -1,28 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Not Found</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <?php include_once 'include/favicons.php'; ?>
-</head>
+<?php get_header(); ?>
+<script>var current_dir = '404.php';</script>
 <body>
-    <main>
+    <main style="min-height: calc(100vh - 119px);">
         <h1>Uh oh, looks like we couldn't find that one..</h1>
         <a href="index.php">Return Home</a>
     </main>
 
-    <?php include_once 'include/footer.php'; ?>
+    <?php get_footer(); ?>
 </body>
 <style>
-    body {
-        background: var(--gradient-pink);
-        height: 100vh;
-    }
-
     main {
+        background: var(--gradient-pink);
         display: flex;
         flex-direction: column;
         text-align: center;

@@ -11,19 +11,8 @@
         if ($row = mysqli_fetch_assoc($result)) {
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $row['title']; ?></title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/single.css">
-    <!-- Set Current Directory Variable -->
-        <script>var current_dir = 'single.php';</script>
-    <?php include_once 'include/favicons.php'; ?>
-</head>
+<?php get_header(); ?>
+
 <body>
     <main>
         <?php include_once 'include/header.php'; ?>
@@ -99,8 +88,7 @@
     </main>
 </body>
     <?php
-        include_once 'include/footer.php';
-        include_once 'include/scripts.php';
+        get_footer();
             }
         }
     ?>

@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Only Friend</title>
-    <!-- Set Current Directory Variable -->
-        <script>var current_dir = 'index.php';</script>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <?php include_once 'include/favicons.php'; ?>
-</head>
+<?php get_header(); ?>
+<script>var current_dir = 'index.php';</script>
 <body>
-    <?php include_once 'include/header.php'; ?>
-
     <main>
         <section id="intro">
             <div class="block">
@@ -27,21 +15,21 @@
                     <h2>1. Find the comfort</h2>
                     <p>A blanket and or customized pillow, socks, candles, and more.</p>
                     <div class="img-area">
-                        <img src="graphics/blanket.svg" alt="Blanket">
+                        <img src="<?php echo get_template_directory_uri(); ?>/graphics/blanket.svg" alt="Blanket">
                     </div>
                 </div>
                 <div class="block">
                     <h2>2. Throw in some encouragement</h2>
                     <p>Choose or write poem, saying, or scripture that would cater to whatever the person is in need of.</p>
                     <div class="img-area">
-                        <img src="graphics/quotes.svg" alt="Quotes">
+                        <img src="<?php echo get_template_directory_uri(); ?>/graphics/quotes.svg" alt="Quotes">
                     </div>
                 </div>
                 <div class="block">
                     <h2>3. Add something tasty</h2>
                     <p>Teas and coffee, maybe a snack? Mug included! These things help a close friend in need of a pick me up.</p>
                     <div class="img-area">
-                        <img src="graphics/snacks.svg" alt="Snacks">
+                        <img src="<?php echo get_template_directory_uri(); ?>/graphics/snacks.svg" alt="Snacks">
                     </div>
                 </div>
             </div>
@@ -62,7 +50,7 @@
                         
                             echo "<div class='block'>";
                                 echo "<h2>{$row['title']}</h2>";
-                                echo "<img src='graphics/baskets/{$row['img_file_name']}' alt='{$row['title']}'>";
+                                echo "<img src='". get_template_directory_uri() ."/graphics/baskets/{$row['img_file_name']}' alt='{$row['title']}'>";
                                 echo "<p>{$row['description']}</p>";
                                 echo "<a class='contains-button' href='single.php?id={$row['id']}'>";
                                     echo "<button>Choose this Basket</button>";
@@ -80,10 +68,6 @@
             <h1>Moments</h1>
         </section>
     </main>
-
-    <?php include_once 'include/footer.php'; ?>
 </body>
-
-<?php include_once 'include/scripts.php'; ?>
-
+<?php include_once 'footer.php'; ?>
 </html>

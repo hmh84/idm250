@@ -77,12 +77,12 @@ header {
     width: fit-content;
 }
 
-nav ul {
+.nav ul {
     background-color: white;
     z-index: 15;
 }
 
-nav li, nav ul {
+.nav li, .nav ul {
     height: 100%;
 }
 
@@ -103,7 +103,7 @@ nav li, nav ul {
     font-family: 'Pacifico', cursive;
 }
 
-nav {
+.nav {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -145,7 +145,7 @@ nav {
     z-index: 5;
 }
 
-nav svg {
+.nav svg {
     width: 5rem;
 }
 
@@ -431,12 +431,12 @@ footer a {
 
 /* Hover States */
 
-section button, nav button, footer a, button#search-btn {
+section button, .nav button, footer a, button#search-btn {
     transition: all .2s ease-in-out;
     -webkit-transition: all .2s ease-in-out;
 }
 
-nav button:hover {
+.nav button:hover {
     transform: translateX(-25%);
     cursor: pointer;
 }

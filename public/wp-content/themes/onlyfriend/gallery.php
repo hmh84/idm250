@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
-    <!-- Set Current Directory Variable -->
-        <script>var current_dir = 'gallery.php';</script>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <?php include_once 'include/favicons.php'; ?>
-</head>
+<?php get_header(); ?>
 <body>
     <?php include_once 'include/header.php'; ?>
 
@@ -48,16 +37,11 @@
             </div>
         </section>
     </main>
-
-    <?php include_once 'include/footer.php'; ?>
+    <?php get_footer(); ?>
 </body>
-
 <style>
     section button {
-        background: var(--gradient-blue)
+        background: var(--gradient-blue);
     }
 </style>
-
-<?php include_once 'include/scripts.php'; ?>
-
 </html>

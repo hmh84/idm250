@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Only Friend</title>
-    <!-- Set Current Directory Variable -->
-        <script>var current_dir = 'contact.php';</script>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <?php include_once 'include/favicons.php'; ?>
-</head>
+<?php get_header(); ?>
+
 <body <?php if (isset($_GET["mailsent"])) { echo 'style="overflow: hidden"'; } ?> >
     <?php include_once 'include/header.php'; ?>
 
@@ -39,9 +29,6 @@
         </div>
     </div>
 
-    <?php include_once 'include/footer.php'; ?>
+    <?php get_footer(); ?>
 </body>
-
-<?php include_once 'include/scripts.php'; ?>
-
 </html>
