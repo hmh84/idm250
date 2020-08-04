@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --green: #68C5AB;
+    --red: #d91d1d;
+    --pink: #FF6F81;
+    --light-green: #AFFFD7;
+
+    --light-gray: #f1f1f1;
+    --medium-gray: #333;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.btm-shadow {
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+a.contains-button {
+    /* This class defines elements that contain buttons and centers them */
+    margin: auto;
+}
+
+section button {
+    width: fit-content;
+    border-radius: .75rem;
+    padding: 1rem 2rem;
+    margin: 1rem auto 2rem auto;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+header {
+    height: 5rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 10;
+}
+
+#logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+}
+
+nav ul {
+    background-color: white;
+    z-index: 15;
+}
+
+nav li, nav ul {
+    height: 100%;
+}
+
+#logo img {
+    height: 100%;
+    padding: 1.33rem;
+}
+
+#logo h2 {
+    color: black;
+    margin-left: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Pacifico', cursive;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    z-index: 10;
+}
+
+#menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 5rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 20;
+    /* transform: translateY(-.5rem) rotate(45deg); */
+}
+
+#menu-btn span {
+    background-color: black;
+    height: .2rem;
+    width: 2rem;
+}
+
+#menu-btn span:first-of-type {
+    /* transform: translateY(1rem) rotate(90deg); */
+}
+
+#backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 5;
+}
+
+nav svg {
+    width: 5rem;
+}
+
+#nav-list {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: white;
+    z-index: 10;
+    padding-bottom: 2rem;
+    
+    transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+}
+
+#nav-list a {
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+    height: 4rem;
+    margin: .25rem 0;
+    display: flex;
+    align-items: center;
+}
+
+#nav-list a:hover {
+    background-color: var(--light-gray);
+}
+
+#nav-list a:first-of-type {
+    margin-top: 0;
+}
+
+#nav-list li {
+    color: black;
+    height: fit-content;
+    width: fit-content;
+    margin: auto 0;
+}
+
+form#search {
+    padding: 0 2rem;
+    height: 4rem;
+    margin: .25rem 0;
+    display: flex;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+input[name="search"] {
+    height: 100%;
+    width: 100%;
+    max-width: 25rem;
+    padding: 0 2rem;
+    background-color: var(--light-gray);
+    border-radius: .75rem;
+    color: black;
+    transform: translateX(1.5rem);
+}
+
+/* Contact Form */
+
+section#contact .block {
+    max-width: 100%;
+}
+
+form#contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 25rem;
+    margin: auto;
+}
+
+form#contact-form input, form#contact-form textarea {
+    min-width: 100%;
+    padding: 1.5rem 2rem;
+    background-color: var(--light-gray);
+    border-radius: .75rem;
+    color: black;
+    margin-bottom: 2rem;
+}
+
+form#contact-form textarea {
+    min-height: 10rem;
+    max-height: 25rem;
+    max-width: 25rem;
+}
+
+button#search-btn {
+    transform: translateX(-3rem);
+    background-color: black;
+    border-radius: .65rem;
+    padding: .5rem 1rem;
+}
+
+/* Contact Modal */
+
+#modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #33333385;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+#modal-main {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    background-color: white;
+    width: 100%;
+    max-width: 30rem;
+    height: fit-content;
+    border-radius: .75rem;
+    padding: 1rem;
+}
+
+#modal-main h2 {
+    color: var(--green);
+}
+
+#modal-main p {
+    color: black;
+}
+
+#modal-main a {
+    color: var(--green);
+    margin: auto;
+}
+
+/* Sections */
+
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    position: relative;
+    z-index: 0;
+}
+
+.block-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+:root {
+    --max-block-width: 25rem;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: var(--max-block-width);
+}
+
+.block h2, .block p {
+    width: 100%;
+    max-width: 25rem;
+    text-align: center;
+    margin: .5rem 0;
+    line-height: 1.5rem;
+}
+
+.img-area {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.block img {
+    width: 100%;
+    max-width: var(--max-block-width);
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+    transform: scale(0.85);
+}
+
+/* Section Colors */
+
+:root {
+    /* THESE ARE ALSO DEFINED IN MAIN.JS IN THE VARIABLE 'gradients', KEEP THEM CONSISTENT */
+    --gradient-blue: #eec0c6 linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+
+    --gradient-pink: #d5adc8 linear-gradient(315deg, #d5adc8 0%, #ff8489 74%);
+
+    --gradient-purple: #9921e8 linear-gradient(315deg, #9921e8 0%, #5f72be 74%);
+}
+
+/* Sections Alternate by 3 */
+
+section#intro {
+    background: none;
+}
+
+section:nth-of-type(3n + 1) {
+    background: var(--gradient-purple);
+}
+
+section:nth-of-type(3n + 2) {
+    background: var(--gradient-blue);
+}
+
+section:nth-of-type(3n + 3) {
+    background: var(--gradient-pink);
+}
+
+/* Buttons Alternate by 3 */
+
+section:nth-of-type(3n + 1) button {
+    background: var(--gradient-pink);
+}
+
+section:nth-of-type(3n + 2) button {
+    background: var(--gradient-purple);
+}
+    
+section:nth-of-type(3n + 3) button {
+    background: var(--gradient-blue);
+}
+
+/* Section - Intro */
+
+section#intro .block {
+    max-width: 100%;
+}
+
+section#intro svg {
+    width: 80%;
+    max-width: 25rem;
+    margin: 2rem auto 0 auto;
+}
+
+section#intro h1, section#intro p {
+    color: black;
+    margin: 0;
+}
+
+/* Section - Intro */
+
+section#build .block img {
+    border-radius: 0;
+    /* This keeps build section images from getting cropped */
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--medium-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+footer h2 {
+    margin-bottom: 1rem;
+    color: var(--green);
+    font-family: 'Pacifico', cursive;
+}
+
+footer a {
+    color: white;
+    text-align: center;
+    margin: auto;
+    padding: .25rem;
+}
+
+/* Hover States */
+
+section button, nav button, footer a, button#search-btn {
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+}
+
+nav button:hover {
+    transform: translateX(-25%);
+    cursor: pointer;
+}
+
+section button:hover {
+    transform: scale(1.05);
+    color: var(--medium-gray);
+    cursor: pointer;
+}
+
+footer a:hover {
+    color: var(--green);
+}
+
+button#search-btn:hover {
+    transform: translateX(-4.5rem) scale(1.05);
+    background: var(--gradient-pink);
+}
+
+section#checkout, section#contact, section#gallery {
+    min-height: calc(100vh - 199px);
+}
+
+/* Meda Queries */
+
+@media only screen and (min-width: 700px) {
+    section#intro .block {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    section#intro svg {
+        margin: unset;
+
+    }
+}
