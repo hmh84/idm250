@@ -8,10 +8,10 @@ function include_css_files() {
 add_action( 'wp_enqueue_scripts', 'include_css_files' );
 
 function include_script_files() {
-    wp_enqueue_script('main-js', get_template_directory_uri() . '/scripts/main.js');
+    wp_enqueue_script('main-js', get_template_directory_uri() . '/scripts/main.js', [], false, true);
 }
 
-// add_action('wp_enqueue_scripts', 'include_script_files');
+add_action('wp_enqueue_scripts', 'include_script_files');
 
 function register_theme_navigation() {
     register_nav_menus([

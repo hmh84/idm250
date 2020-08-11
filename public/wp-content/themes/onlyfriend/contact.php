@@ -23,7 +23,7 @@
         <div id="modal-main">
             <h2>Your message has been sent.</h2>
             <br>
-            <p>Only Friend will get back to you at the soonest convenience.</p>
+            <p>Care by Kay & Jay will get back to you at the soonest convenience.</p>
             <br>
             <a href="index.php">Return Home</a>
         </div>

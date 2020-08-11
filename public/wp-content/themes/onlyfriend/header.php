@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Only Friend</title>
+    <title>Care by Kay & Jay</title>
     <?php wp_head(); ?>
     <!-- Set Current Directory Variable -->
         <script>var current_dir = 'index.php';</script>

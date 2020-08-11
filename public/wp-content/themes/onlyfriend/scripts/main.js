@@ -40,7 +40,7 @@ const table = document.querySelector('table');
     new_nav_img.setAttribute('alt', 'Logo');
 
     new_nav_h2.setAttribute('id', 'header-text');
-    new_nav_h2.innerHTML = 'Only Friend';
+    new_nav_h2.innerHTML = 'Care by Kay & Jay';
 
     new_nav_a.setAttribute('href', 'index.php');
     new_nav_a.setAttribute('rel', 'noopener noreferrer');
@@ -116,7 +116,7 @@ const table = document.querySelector('table');
     const new_header = document.createElement('header');
     body.insertBefore(new_header, body.firstChild);
     new_header.insertBefore(wp_nav, new_header.firstChild);
-    wp_nav.appendChild(new_nav_ul);
+    wp_nav.appendChild(new_nav_ul);nav
     
     // Set main to correct vertical height
 
@@ -184,7 +184,7 @@ const table = document.querySelector('table');
             nav.removeAttribute('id');
             nav_list.style.top = '-420px';
             setTimeout(function() {
-                // Everything in me takes 200
+                // Everything in me takes 250
                 nav_list.style.display = 'none';
             }, 250);
             // backdrop.style.display = 'none';
@@ -192,7 +192,7 @@ const table = document.querySelector('table');
             nav.setAttribute('id', 'opened');
             nav_list.style.display = 'flex';
             setTimeout(function() {
-                // Everything in me takes 200
+                // Everything in me takes 250
                 nav_list.style.top = '0';
             }, 250);
             // backdrop.style.display = 'block';

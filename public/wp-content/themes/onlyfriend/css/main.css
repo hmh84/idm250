@@ -123,17 +123,12 @@ header {
     padding: 1rem;
     background-color: rgba(0, 0, 0, 0);
     z-index: 20;
-    /* transform: translateY(-.5rem) rotate(45deg); */
 }
 
 #menu-btn span {
     background-color: black;
     height: .2rem;
     width: 2rem;
-}
-
-#menu-btn span:first-of-type {
-    /* transform: translateY(1rem) rotate(90deg); */
 }
 
 #backdrop {

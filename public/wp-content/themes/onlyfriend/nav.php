@@ -8,7 +8,7 @@
             <a href="index.php" rel="noopener noreferrer">
                 <li id="logo">
                     <img src="<?php echo get_template_directory_uri(); ?>/graphics/favicons/favicon.svg" alt="Logo">
-                    <h2 id="header-text">Only Friend</h2>
+                    <h2 id="header-text">Care by Kay & Jay</h2>
                 </li>
             </a>
         </ul>
