@@ -1,10 +1,176 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* HTML5 display-role reset for older browsers */
+
+/* article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 3%;
+}
+
+.header {
+	padding: 20px 0;
+	border-bottom: 1px solid black;
+}
+
+.header__content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__logo {
+	max-width: 200px;
+}
+
+.menu {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.menu-item {
+	display: block;
+	padding: 0 10px;
+}
+
+.menu-item a {
+	color: black;
+	text-decoration: none;
+}
+
+.menu-item:hover {
+	border-bottom: 1px solid red;
+}
+
+.menu-item:hover .sub-menu {
+	display: block;
+}
+
+.sub-menu {
+	display: none;
+}
+
+.current-menu-item {
+	border-bottom: 1px solid red;
+}
+
+.header {
+	margin-bottom: 50px;
+}
+
+.wp-block-quote {
+	margin-left: 10px;
+	border-left: 1px solid red;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 22px;
+	padding-left: 20px;
+}
+
+.post_title {
+	font-size: 28px;
+}
+
+.page-builder {
+	margin-top: 50px;
+}
+
+.page-builder * + * {
+	margin-top: 10px;
+}
+
+.page-builder h2 {
+	font-size: 40px;
+}
+
+.page-builder {
+	font-size: 16px;
+} */
+
+/* LAYOUTS */
+
+/* .split-sidebar {
+	display: flex;
+}
+
+.split-sidebar .column-main {
+	width: 70%;
+}
+
+.split-sidebar .column-sidebar {
+	width: 30%;
+}
+
+.split-3 {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.split-3 .column {
+	width: 30%;
+	padding: 0 10px;
+}
+
+.wp-post-image {
+	width: 100%;
+	height: auto;
+}
+
+.widgettitle {
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.footer {
+	padding: 50px 0;
+	background-color: gray;
+	display: flex;
+	justify-content: space-between;
+} */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 * {
-    color: white;
+    /* color: white; */
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
+}
+
+main *, footer * {
+	color: white;
 }
 
 :root {
@@ -60,75 +226,92 @@ a:active {
     list-style-type: none;
 }
 
-header {
-    height: 5rem;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: white;
-    z-index: 10;
-}
+/* Nav */
 
-#logo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: fit-content;
-}
-
-.nav ul {
-    background-color: white;
-    z-index: 15;
-}
-
-.nav li, .nav ul {
-    height: 100%;
-}
-
-#logo img {
-    height: 100%;
-    padding: 1.33rem;
-}
-
-#logo h2 {
-    color: black;
-    margin-left: 1rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    text-align: center;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    font-family: 'Pacifico', cursive;
-}
-
-.nav {
+#menu-header-nav {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    z-index: 10;
+	z-index: 10;
+	padding: 1rem 0;
 }
 
-#menu-btn {
-    position: absolute;
-    top: 0;
-    right: 0;
+.menu-item {
+	/* height: 2.5rem; */
+	margin-bottom: .25rem;
+}
+
+.menu-item a {
+	padding: 0 2rem;
+	color: black;
+	height: 4rem;
+    display: flex;
+    align-items: center;
+}
+
+.nav-top {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#nav-img {
+	width: 5rem;
+	height: 5rem;
+}
+
+#nav-btn {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    height: 100%;
+    height: 5rem;
     width: 5rem;
     padding: 1rem;
     background-color: rgba(0, 0, 0, 0);
     z-index: 20;
 }
 
-#menu-btn span {
+#nav-btn span {
     background-color: black;
     height: .2rem;
     width: 2rem;
+}
+
+#nav-title {
+	font-family: 'Pacifico', cursive;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Nav Search */
+
+.nav-form {
+    text-align: center;
+	padding: 0 2rem;
+    margin: .25rem 0;
+}
+
+.nav-form * {
+	margin: .25rem 0;
+}
+
+input[type="search"] {
+	height: 4rem;
+	width: 100%;
+	max-width: 25rem;
+	padding: 0 2rem;
+	background-color: var(--light-gray);
+	border-radius: .75rem;
+	color: black;
+}
+
+button[type="submit"] {
+	background-color: black;
+	color: white;
+    border-radius: .65rem;
+	padding: .5rem 1rem;
 }
 
 #backdrop {
@@ -138,68 +321,6 @@ header {
     height: 100vh;
     width: 100vw;
     z-index: 5;
-}
-
-.nav svg {
-    width: 5rem;
-}
-
-#nav-list {
-    position: absolute;
-    right: 0;
-    width: 100%;
-    flex-direction: column;
-    background-color: white;
-    z-index: 10;
-    padding-bottom: 2rem;
-    
-    transition: all .25s ease-in-out;
-    -webkit-transition: all .25s ease-in-out;
-}
-
-#nav-list a {
-    margin-bottom: 2rem;
-    padding: 0 2rem;
-    height: 4rem;
-    margin: .25rem 0;
-    display: flex;
-    align-items: center;
-}
-
-#nav-list a:hover {
-    background-color: var(--light-gray);
-}
-
-#nav-list a:first-of-type {
-    margin-top: 0;
-}
-
-#nav-list li {
-    color: black;
-    height: fit-content;
-    width: fit-content;
-    margin: auto 0;
-}
-
-form#search {
-    padding: 0 2rem;
-    height: 4rem;
-    margin: .25rem 0;
-    display: flex;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-
-input[name="search"] {
-    height: 100%;
-    width: 100%;
-    max-width: 25rem;
-    padding: 0 2rem;
-    background-color: var(--light-gray);
-    border-radius: .75rem;
-    color: black;
-    transform: translateX(1.5rem);
 }
 
 /* Contact Form */
@@ -408,7 +529,7 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     padding: 1rem;
-    width: 100%;
+    /* width: 100%; */
 }
 
 footer h2 {

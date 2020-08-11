@@ -1,7 +1,15 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The template for displaying the front page.
+ *
+ * This is the template that displays on the front page only.
+ * Set this in settings > reading > static page
+ *
+ */
+
+get_header();?>
 <script>var current_dir = 'index.php';</script>
-<body>
-    <main>
+<main>
         <section id="intro">
             <div class="block">
                 <h1>“Peace of mind to a friend of mine” #onlyFriend</h1>
@@ -68,6 +76,4 @@
             <h1>Moments</h1>
         </section>
     </main>
-</body>
-<?php include_once 'footer.php'; ?>
-</html>
+<?php get_footer(); ?>
