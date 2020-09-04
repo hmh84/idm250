@@ -3,10 +3,9 @@
  * The template for displaying all single posts.
  *
  */
-
-include_once 'include/db.php';
 ?>
-<main class="main-content">
+<?php get_header();?>
+<main>
   <?php while (have_posts()) : the_post(); ?>
     <div class="container split-sidebar">
         <!-- Main Content -->
@@ -17,13 +16,15 @@ include_once 'include/db.php';
 
           <p class="post_meta"><?php the_date('n/j/Y') ?> | <?php  the_category(); ?></p>
 
+          <div class="intro">
+            <?php the_excerpt();?>
+          </div>
+
           <div class="page-builder">
             <?php the_content(); ?>
           </div>
-            <?php the_tags(); ?>
-        </div>
 
     </div>
   <?php endwhile; ?>
 </main>
-<?php get_footer();?>
+<?php get_footer(); ?>

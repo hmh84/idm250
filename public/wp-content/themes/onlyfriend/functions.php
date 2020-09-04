@@ -19,4 +19,16 @@ require get_template_directory() . '/lib/setup.php';
 /**
  * Register custom post types
  */
-require get_template_directory() . '/lib/custom-post-type.php';
+require get_template_directory() . '/lib/custom-post-types.php';
+
+// /**
+//  * Register custom taxonomies
+//  */
+// require get_template_directory() . '/lib/custom-taxonomies.php';
+/**
+ * ACF Setup
+ */
+require get_template_directory() . '/lib/acf.php';
+
+
+add_filter('acf/settings/remove_wp_meta_box', '__return_false');

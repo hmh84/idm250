@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Care by Kay & Jay</title>
+    <title><?php bloginfo('name'); ?></title>
     <?php wp_head(); ?>
     <!-- Favicons -->
         <link rel="apple-touch-icon" sizes="180x180" href="graphics/favicons/apple-touch-icon.png">
@@ -17,10 +17,22 @@
 </head>
 <body <?php body_class(); ?>>
 <header class="header">
-  <div class="container header__content">
-    <!-- <img class="header__logo" src="https://placehold.it/500x60" alt="This is the logo"> -->
-
-    <?php wp_nav_menu(['theme_location' => 'primary_menu']);?>
-  </div>
+    <div class="nav-top">
+        <a href="/">
+            <img id="header-img" src="<?php echo get_template_directory_uri() ?>/graphics/favicons/favicon.svg" alt="Logo">
+        </a>
+        <h2 id="header-text"><?php bloginfo('name'); ?></h2>
+        <button id="header-btn">
+            <span></span>
+            <span id="span-1"></span>
+        </button>
+    </div>
+    <div class="nav-content btm-shadow">
+        <?php wp_nav_menu(['theme_location' => 'primary_menu']);?>
+        <form id="search" method="GET" action="gallery.php">
+            <input id="search-input" type="search" name="search" placeholder="Search">
+            <button id="search-btn" type="submit">Go</button>
+        </form>
+    </div>
 </header>
 <!-- <div id="backdrop"></div> -->

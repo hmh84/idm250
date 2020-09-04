@@ -39,10 +39,11 @@ a.contains-button {
 }
 
 section button {
-    width: fit-content;
-    border-radius: .75rem;
-    padding: 1rem 2rem;
-    margin: 1rem auto 2rem auto;
+    width: fit-content !important;
+    border-radius: .75rem !important;
+    padding: 1rem 2rem !important;
+    margin: 1rem auto 2rem auto !important;
+    border: none !important;
 }
 
 h1 {
@@ -70,12 +71,22 @@ a:active {
     display: flex;
     flex-direction: column;
 	z-index: 10;
-	padding: 1rem 0;
+    padding: 1rem 0;
+}
+
+.container.header__content {
+    background-color: white;
+    padding: 0 0 1rem;
 }
 
 .menu-item {
 	/* height: 2.5rem; */
 	margin-bottom: .25rem;
+}
+
+.menu-item:hover {
+	/* height: 2.5rem; */
+	background-color: var(--light-gray);
 }
 
 .menu-item a {
@@ -90,15 +101,27 @@ a:active {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	align-items: center;
+    align-items: center;
+    height: 5rem;
 }
 
-#nav-img {
+header {
+    height: 5rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 10;
+}
+
+#header-img {
 	width: 5rem;
-	height: 5rem;
+    height: 5rem;
+    padding: 1rem;
 }
 
-#nav-btn {
+#header-btn {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -110,13 +133,13 @@ a:active {
     z-index: 20;
 }
 
-#nav-btn span {
+#header-btn span {
     background-color: black;
     height: .2rem;
     width: 2rem;
 }
 
-#nav-title {
+#header-text {
 	font-family: 'Pacifico', cursive;
     height: 5rem;
     display: flex;
@@ -124,6 +147,21 @@ a:active {
 }
 
 /* Nav Search */
+
+.nav-content {
+    background-color: white;
+    padding-bottom: 1rem;
+}
+
+form#search {
+    padding: 0 2rem;
+    height: 4rem;
+    margin: .25rem 0;
+    display: flex;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
 
 .nav-form {
     text-align: center;
@@ -146,9 +184,9 @@ input[type="search"] {
 }
 
 button[type="submit"] {
-	background-color: black;
-	color: white;
-    border-radius: .65rem;
+	background-color: black !important;
+	color: white !important;
+    border-radius: .65rem !important;
 	padding: .5rem 1rem;
 }
 
@@ -163,83 +201,78 @@ button[type="submit"] {
 
 /* Contact Form */
 
+.wpforms-container-full {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
 section#contact .block {
     max-width: 100%;
 }
 
-form#contact-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    max-width: 25rem;
-    margin: auto;
+.contact-form form {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 25rem !important;
+    margin: auto !important;
 }
 
-form#contact-form input, form#contact-form textarea {
-    min-width: 100%;
-    padding: 1.5rem 2rem;
-    background-color: var(--light-gray);
-    border-radius: .75rem;
-    color: black;
-    margin-bottom: 2rem;
+.contact-form input, .contact-form textarea {
+    min-width: 100% !important;
+    padding: 1.5rem 2rem !important;
+    background-color: var(--light-gray) !important;
+    border: none !important;
+    border-radius: .75rem !important;
+    color: black !important;
+    margin-bottom: 2rem !important;
 }
 
-form#contact-form textarea {
-    min-height: 10rem;
-    max-height: 25rem;
-    max-width: 25rem;
+div.wpforms-container-full .wpforms-form .wpforms-field, .wpforms-submit-container {
+    padding: 0 !important;
+}
+
+.contact-form textarea {
+    min-height: 10rem !important;
+    max-height: 25rem !important;
+    max-width: 25rem !important;
 }
 
 button#search-btn {
-    transform: translateX(-3rem);
-    background-color: black;
-    border-radius: .65rem;
-    padding: .5rem 1rem;
+    transform: translateX(-4.5rem) !important;
+    background-color: black !important;
+    border-radius: .65rem !important;
+    padding: .5rem 1rem !important;
 }
 
-/* Contact Modal */
-
-#modal {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background-color: #33333385;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
+button#wpforms-submit-202 {
+    margin: 0 !important;
 }
 
-#modal-main {
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+div#wpforms-confirmation-202 {
     margin: auto;
-    background-color: white;
-    width: 100%;
-    max-width: 30rem;
-    height: fit-content;
-    border-radius: .75rem;
-    padding: 1rem;
+    background: none;
+    border: none;
+    padding: 0 2rem;
 }
 
-#modal-main h2 {
-    color: var(--green);
+div#wpforms-confirmation-202 p {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-#modal-main p {
-    color: black;
-}
-
-#modal-main a {
-    color: var(--green);
-    margin: auto;
+.wpforms-submit-container {
+    margin: 0 auto !important;
 }
 
 /* Sections */
+
+section:only-of-type {
+    min-height: calc(100vh - 199px);
+    padding-top: 80px;
+}
 
 section {
     display: flex;
@@ -256,6 +289,10 @@ section {
     flex-wrap: wrap;
 }
 
+.section-title {
+    color: white;
+}
+
 :root {
     --max-block-width: 25rem;
 }
@@ -267,12 +304,31 @@ section {
     max-width: var(--max-block-width);
 }
 
+.block h3 {
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.wp-block-separator {
+    background-color: white;
+    height: .01rem;
+    width: 75%;
+    margin: .5rem auto;
+}
+
+em, figcaption, blockquote p {
+    font-style: italic;
+}
+
+.block h2, .block p, .block li {
+    line-height: 1.5rem;
+    margin: .5rem 0;
+}
+
 .block h2, .block p {
     width: 100%;
     max-width: 25rem;
     text-align: center;
-    margin: .5rem 0;
-    line-height: 1.5rem;
 }
 
 .img-area {
@@ -304,7 +360,7 @@ section {
 
 /* Sections Alternate by 3 */
 
-section#intro {
+section#hero {
     background: none;
 }
 
@@ -322,40 +378,59 @@ section:nth-of-type(3n + 3) {
 
 /* Buttons Alternate by 3 */
 
+button {
+    color: white;
+}
+
 section:nth-of-type(3n + 1) button {
-    background: var(--gradient-pink);
+    background: var(--gradient-pink) !important;
 }
 
 section:nth-of-type(3n + 2) button {
-    background: var(--gradient-purple);
+    background: var(--gradient-purple) !important;
 }
     
 section:nth-of-type(3n + 3) button {
-    background: var(--gradient-blue);
+    background: var(--gradient-blue) !important;
 }
 
-/* Section - Intro */
+/* Section - Hero */
 
-section#intro .block {
+section#hero .block {
     max-width: 100%;
 }
 
-section#intro svg {
+section#hero svg {
     width: 80%;
     max-width: 25rem;
     margin: 2rem auto 0 auto;
 }
 
-section#intro h1, section#intro p {
+section#hero h1, section#hero p {
     color: black;
     margin: 0;
 }
 
-/* Section - Intro */
+/* Section - Hero */
+
+section#hero .block img {
+    width: 80%;
+    max-width: 25rem;
+    height: auto;
+    border-radius: 0;
+    transform: none;
+    padding: 2rem;
+}
 
 section#build .block img {
     border-radius: 0;
     /* This keeps build section images from getting cropped */
+}
+
+/* Section - Single */
+
+section.single h1 {
+    text-align: center;
 }
 
 /* Footer */
@@ -383,22 +458,50 @@ footer a {
     padding: .25rem;
 }
 
-/* Hover States */
+/* 404 */
 
-section button, .nav button, footer a, button#search-btn {
-    transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
+.error {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 35vh;
 }
 
-.nav button:hover {
+.error h1 {
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
+    padding-top: 20vh;
+}
+
+.error a {
+    text-decoration: underline !important;
+    transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+    width: fit-content;
+    margin: 0 auto;
+    padding: .5rem 1rem;
+}
+
+.error a:hover {
+    color: var(--red);
+}
+
+/* Hover States */
+
+section button, #menu-header-nav, .menu, #header-btn, footer a, button#search-btn {
+    transition: all .2s ease-in-out !important;
+    -webkit-transition: all .2s ease-in-out !important;
+}
+
+#header-btn:hover {
     transform: translateX(-25%);
     cursor: pointer;
 }
 
 section button:hover {
-    transform: scale(1.05);
-    color: var(--medium-gray);
-    cursor: pointer;
+    transform: scale(1.05) !important;
+    color: var(--medium-gray) !important;
+    cursor: pointer !important;
 }
 
 footer a:hover {
@@ -406,25 +509,72 @@ footer a:hover {
 }
 
 button#search-btn:hover {
-    transform: translateX(-4.5rem) scale(1.05);
-    background: var(--gradient-pink);
+    transform: translateX(-4.5rem) scale(1.05) !important;
+    background: var(--gradient-pink) !important;
 }
 
 section#checkout, section#contact, section#gallery {
     min-height: calc(100vh - 199px);
 }
 
-/* Meda Queries */
+/* Media Queries */
 
 @media only screen and (min-width: 700px) {
-    section#intro .block {
+    section#hero .block {
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
     }
 
-    section#intro svg {
+    section#hero svg, section#hero img {
         margin: unset;
 
     }
+}
+
+/* REQUIRED WP BLOCKS */
+
+.wp-block-table {
+    border: none !important;
+}
+
+table {
+    background-color: white;
+    width: 100%;
+    max-width: var(--max-block-width);
+    padding: 1rem;
+    border-radius: .25rem;
+}
+
+td {
+    color: black;
+    padding: .5rem;
+}
+
+figcaption {
+    margin: 1rem;
+}
+
+blockquote p { 
+    font-weight: bold;
+}
+
+blockquote p::before { 
+    content: '"';
+}
+
+blockquote p::after { 
+    content: '"';
+}
+
+cite {
+    font-family: 'Pacifico', cursive;
+}
+
+cite::before { 
+    content: "-";
+}
+
+.wp-block-image img {
+    border-radius: 0;
 }
