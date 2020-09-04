@@ -5,7 +5,7 @@ public/wp-content/*
 public/wp-content/themes/*
 
 # ===Include themes to keep===
-!public/wp-content/themes/onlyfriend
+!public/wp-content/themes/2020
 # ===End of themes to include===
 
 .DS_Store

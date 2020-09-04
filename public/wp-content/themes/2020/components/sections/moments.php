@@ -5,7 +5,7 @@
     $query = new WP_Query( array( 'post_type' => 'moments', 'paged' => $paged, 'tag' => 'featured', ) );
 
     if ( $query->have_posts() ) : ?>
-    <section class="curated">
+    <section class="moments">
         <div class="block-wrap">
 
             <?php while ( $query->have_posts() ) : $query->the_post(); ?>
