@@ -65,8 +65,6 @@ add_action('widgets_init', 'register_theme_sidebar');
 function register_theme_navigation() {
     register_nav_menus([
       'primary_menu' => 'Primary Menu',
-      'footer_menu'  => 'Footer Menu',
-      'social_menu'  => 'Social Menu',
   ]);
 }
 

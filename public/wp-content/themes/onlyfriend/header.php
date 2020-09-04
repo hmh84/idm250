@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Care by Kay & Jay</title>
     <?php wp_head(); ?>
-    <!-- Set Current Directory Variable -->
-        <script>var current_dir = 'index.php';</script>
     <!-- Favicons -->
         <link rel="apple-touch-icon" sizes="180x180" href="graphics/favicons/apple-touch-icon.png">
         <!-- <link rel="icon" type="image/png" sizes="32x32" href="graphics/favicons/favicon-32x32.png"> -->
