@@ -49,10 +49,10 @@ add_action('init', 'register_basket_custom_post_type');
 
 function register_moment_custom_post_type() {
     $args = [
-    'label'                 => 'moment',
+    'label'                 => 'Moment',
     'labels'                => [
-        'name'                  => 'moments',
-        'singular_name'         => 'moment'
+        'name'                  => 'Moments',
+        'singular_name'         => 'Moment'
     ],
     'supports' => [
         'title',
