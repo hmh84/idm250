@@ -17,7 +17,7 @@
 
                 <p><?php the_excerpt(); ?></p>
                 <a class="contains-button" href="<?php the_permalink(); ?>">
-                    <button>See the difference</button>
+                    <button>See the Difference</button>
                 </a>
             </div>
             <?php endwhile; wp_reset_postdata(); ?>

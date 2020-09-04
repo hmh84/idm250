@@ -1,7 +1,8 @@
 <?php
-$basket_price = get_field('basket_price') ?: 'Your price here...';
-?>
-<?php get_header();?>
+/*
+Template Name: Contact Wide
+*/
+get_header();?>
 <main>
     <section class="single">
         <h1><?php the_title(); ?></h1>
@@ -10,7 +11,6 @@ $basket_price = get_field('basket_price') ?: 'Your price here...';
             <div class="block">
                 <?php the_post_thumbnail(); ?>
                 <?php the_excerpt(); ?>
-                <p><?php echo $basket_price; ?></p>
             </div>
             <div class="block">
                 <?php the_content(); ?>
