@@ -29,10 +29,10 @@
     </div>
     <div class="nav-content btm-shadow">
         <?php wp_nav_menu(['theme_location' => 'primary_menu']);?>
-        <form id="search" method="GET" action="gallery.php">
-            <input id="search-input" type="search" name="search" placeholder="Search">
-            <button id="search-btn" type="submit">Go</button>
-        </form>
+        <form id="search" method="GET" action="/">
+            <input id="search-input" type="search" name="s" placeholder="Search" value="<?php the_search_query(); ?>">
+            <button id="search-btn" type="submit" value="Search">Go</button>
+    </form>
     </div>
 </header>
 <!-- <div id="backdrop"></div> -->

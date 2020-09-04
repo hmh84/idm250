@@ -8,7 +8,6 @@
 <main>
   <?php while (have_posts()) : the_post(); ?>
     <div class="container split-sidebar">
-        <!-- Main Content -->
         <div class="column column-main">
           <h1 class="post_title js-blog-heading"><?php the_title(); ?></h1>
 
