@@ -201,42 +201,33 @@ button[type="submit"] {
 
 /* Contact Form */
 
-.wpforms-container-full {
-    width: 100% !important;
-    margin: 0 !important;
-}
-
-section#contact .block {
+section.contact .block {
     max-width: 100%;
 }
 
-.contact-form form {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    width: 100% !important;
-    max-width: 25rem !important;
-    margin: auto !important;
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 25rem;
+    margin: auto;
 }
 
 .contact-form input, .contact-form textarea {
-    min-width: 100% !important;
-    padding: 1.5rem 2rem !important;
-    background-color: var(--light-gray) !important;
-    border: none !important;
-    border-radius: .75rem !important;
-    color: black !important;
-    margin-bottom: 2rem !important;
-}
-
-div.wpforms-container-full .wpforms-form .wpforms-field, .wpforms-submit-container {
-    padding: 0 !important;
+    min-width: 100%;
+    padding: 1.5rem 2rem;
+    background-color: var(--light-gray);
+    border: none;
+    border-radius: .75rem;
+    color: black;
+    margin-bottom: 2rem;
 }
 
 .contact-form textarea {
-    min-height: 10rem !important;
-    max-height: 25rem !important;
-    max-width: 25rem !important;
+    min-height: 10rem;
+    max-height: 25rem;
+    max-width: 25rem;
 }
 
 button#search-btn {
@@ -246,33 +237,13 @@ button#search-btn {
     padding: .5rem 1rem !important;
 }
 
-button#wpforms-submit-202 {
-    margin: 0 !important;
-}
-
-div#wpforms-confirmation-202 {
-    margin: auto;
-    background: none;
-    border: none;
-    padding: 0 2rem;
-}
-
-div#wpforms-confirmation-202 p {
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.wpforms-submit-container {
-    margin: 0 auto !important;
-}
-
 /* Sections */
 
 section:only-of-type {
     /* min-height: calc(100vh - 199px); */
     min-height: 100vh;
     padding-top: 80px;
+    background: var(--gradient-pink) !important;
 }
 
 section {
@@ -337,9 +308,11 @@ em, figcaption, blockquote p {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin: .5rem 0;
 }
 
-.block img {
+section.baskets .block img {
     width: 100%;
     max-width: var(--max-block-width);
     height: auto;
@@ -351,7 +324,6 @@ em, figcaption, blockquote p {
 /* Moments Section */
 
 section.moments img {
-    border-radius: 0;
     height: 15rem;
     width: 25rem;
 }
@@ -431,7 +403,7 @@ section#hero .block img {
     padding: 2rem;
 }
 
-section#build .block img {
+section.steps .block img {
     border-radius: 0;
     /* This keeps build section images from getting cropped */
 }
@@ -495,6 +467,10 @@ footer a {
     color: var(--red);
 }
 
+section:only-of-type button {
+    background: var(--gradient-blue) !important;
+}
+
 /* Hover States */
 
 section button, #menu-header-nav, .menu, #header-btn, footer a, button#search-btn {
@@ -522,10 +498,6 @@ button#search-btn:hover {
     background: var(--gradient-pink) !important;
 }
 
-section#checkout, section#contact, section#gallery {
-    min-height: calc(100vh - 199px);
-}
-
 /* Media Queries */
 
 @media only screen and (min-width: 700px) {
@@ -541,7 +513,7 @@ section#checkout, section#contact, section#gallery {
     }
 }
 
-/* REQUIRED WP BLOCKS */
+/* ----- REQUIRED WP BLOCKS ----- */
 
 .wp-block-table {
     border: none !important;
@@ -586,4 +558,32 @@ cite::before {
 
 .wp-block-image img {
     border-radius: 0;
+}
+
+/* Contact Wide */
+
+#contact-wide form {
+    width: 100%;
+    max-width: 1000px;
+    flex-wrap: wrap;
+    flex-direction: unset;
+    justify-content: space-between;
+}
+
+#contact-wide input[name="name"] {
+    width: 45%;
+    min-width: unset;
+}
+
+#contact-wide input[name="email"] {
+    width: 45%;
+    min-width: unset;
+}
+
+#contact-wide input[name="subject"] {
+
+}
+
+#contact-wide textarea[name="message"] {
+
 }

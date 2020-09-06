@@ -1,10 +1,10 @@
 <?php
 /*
-Template Name: Contact
+Template Name: Contact Wide
 */
 get_header();?>
 <main>
-    <section class="contact">
+    <section class="contact" id="contact-wide">
         <h1><?php the_title(); ?></h1>
         <div class="block-wrap">
             <div class="block">
@@ -20,7 +20,7 @@ get_header();?>
     </section>
 </main>
 
-<div id="modal" <?php if (isset($_GET["mailsent"])) { echo 'style="display: flex"'; } else { echo 'style="display: none"'; } ?> >
+<div id="modal" <?php if (isset($_GET["mailsent"])) {echo 'style="display: flex"';} else { echo 'style="display: none"';} ?>>
     <div id="modal-main">
         <h2>Your message has been sent.</h2>
         <br>
@@ -29,4 +29,5 @@ get_header();?>
         <a href="index.php">Return Home</a>
     </div>
 </div>
+
 <?php get_footer(); ?>

@@ -2,7 +2,7 @@
     $rows = get_field('steps');
     if( $rows ) { ?>
     
-    <section id="build">
+    <section class="steps">
         <h1>Build a Basket</h1>
         <div class="block-wrap">
     

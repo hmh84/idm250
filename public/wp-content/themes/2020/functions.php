@@ -24,11 +24,14 @@ require get_template_directory() . '/lib/custom-post-types.php';
 // /**
 //  * Register custom taxonomies
 //  */
-// require get_template_directory() . '/lib/custom-taxonomies.php';
+
 /**
  * ACF Setup
  */
 require get_template_directory() . '/lib/acf.php';
 
+// Remove Default Post Type
+
+require get_template_directory() . '/lib/rdp.php';
 
 add_filter('acf/settings/remove_wp_meta_box', '__return_false');

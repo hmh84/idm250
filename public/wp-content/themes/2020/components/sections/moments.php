@@ -11,11 +11,11 @@
             <?php while ( $query->have_posts() ) : $query->the_post(); ?>
             <div class="block">
                 <h2><?php the_title(); ?></h2>
-                <?php the_post_thumbnail(); ?>
+                <div class="img-area">
+                    <?php the_post_thumbnail(); ?>
+                </div>
 
-                <p><?php echo $basket_price; ?></p>
-
-                <p><?php the_excerpt(); ?></p>
+                <?php the_excerpt(); ?>
                 <a class="contains-button" href="<?php the_permalink(); ?>">
                     <button>See the Difference</button>
                 </a>
