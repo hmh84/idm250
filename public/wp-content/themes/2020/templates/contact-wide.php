@@ -8,7 +8,7 @@ get_header();?>
         <h1><?php the_title(); ?></h1>
         <div class="block-wrap">
             <div class="block">
-                <form class="contact-form" action="_self" method="post">
+                <form class="contact-form" action="../includes/contact-handler.php" method="post">
                     <input type="text" name="name" placeholder="Full Name">
                     <input type="text" name="email" placeholder="Email">
                     <input type="text" name="subject" placeholder="Subject">
